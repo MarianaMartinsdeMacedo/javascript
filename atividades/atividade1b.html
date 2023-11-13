@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculo de Média</title>
+</head>
+<body>
+  <h1>Javascript</h1>
+  <label for="id_n1">Nota 1:</label>
+  <input type="text" id="id_n1">
+  <br>
+  <label for="id_n2">Nota 2:</label>
+  <input type="text" id="id_n2">
+  <br>
+  <button onclick="calcular()">Calcular</button>
+  <br>
+  <p>Média: <input type="text" id="id_media" disable></p>
+  <p>Situação: <input type="text" id="id_situacao" disable></p>
+  <script>
+    function calcular(){
+      var n1 = parseFloat(prompt("Digite a nota 1:"));
+      var n2 = parseFloat(prompt("Digite a nota 2:"));
+      var media = (n1 + n2) / 2;
+
+      document.getElementById("id_media").value = media;
+      let situacao = "";
+      if (media >= 6) {
+        situacao = "Aprovado";
+      } else {
+      situacao = "Reprovado";
+      }
+      document.getElementById("id_situacao").value = situacao;
+    } 
+</script>
+
+</body>
+</html>
